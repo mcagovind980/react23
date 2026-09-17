@@ -1,0 +1,14 @@
+.container{
+    width: 50%;
+border: 0px solid black ;
+height: 500px;
+background-color: aqua;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.container>.card {
+    height: 300px;
+    width:300Px;
+    background-color: blue;
+}
