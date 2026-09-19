@@ -171,53 +171,89 @@ import {useState} from "react"
 // export default MyForm
 
 
-function Myform() {
-  const [inputs, setInputs] = useState({
-    firstname: "",
-    lastname: ""
-  });
+// function Myform() {
+//   const [inputs, setInputs] = useState({
+//     firstname: "",
+//     lastname: ""
+//   });
 
-  function Handle(e) {
-    const name = e.target.name;
-    const value = e.target.value;
+//   function Handle(e) {
+//     const name = e.target.name;
+//     const value = e.target.value;
 
-    setInputs({
-      ...value,
-      [name]: value
-    });
-  }
+//     setInputs({
+//       ...value,
+//       [name]: value
+//     });
+//   }
 
-  return (
+//   return (
+//     <>
+//       <form>
+//         <label>
+//           First Name:
+//           <input
+//             type="text"
+//             name="firstname"
+//             value={inputs.firstname}
+//             onChange={Handle}
+//           />
+//         </label>
+
+//         <br /><br />
+
+//         <label>
+//           Last Name:
+//           <input
+//             type="text"
+//             name="lastname"
+//             value={inputs.lastname}
+//             onChange={Handle}
+//           />
+//         </label>
+//       </form>
+
+//       <p>
+//         Current values: {inputs.firstname} {inputs.lastname}
+//       </p>
+//     </>
+//   );
+// }
+
+// export default Myform;
+
+
+
+function MyForm()
+{
+  const [text,setText]=useState({});
+function Handle(e)
+{
+  const name=e.target.name;
+  const value=e.target.value;
+setText(values=>({...values,[name]:value}));
+}
+function Submit(e)
+{
+  e.preventDefault()
+  alert(text.firstname+""+text.lastname)
+}
+  return(
+
+
     <>
-      <form>
-        <label>
-          First Name:
-          <input
-            type="text"
-            name="firstname"
-            value={inputs.firstname}
-            onChange={Handle}
-          />
-        </label>
-
-        <br /><br />
-
-        <label>
-          Last Name:
-          <input
-            type="text"
-            name="lastname"
-            value={inputs.lastname}
-            onChange={Handle}
-          />
-        </label>
-      </form>
-
-      <p>
-        Current values: {inputs.firstname} {inputs.lastname}
-      </p>
-    </>
-  );
+    <form onSubmit={Submit}>
+    <label >Name
+    <input type="text" name="firstname" value={text.firstname} onChange={Handle} />
+    </label>
+    <label>last Name
+    <input type="text"  name="lastname" value={text.lastname} onChange={Handle}/>
+    </label>
+    <p> this is {text.firstname} and {text.lastname}</p>
+    <button type="submit" onSubmit={Submit}>Click</button>
+    </form>
+   </>
+   )
 }
 
-export default Myform;
+export default MyForm

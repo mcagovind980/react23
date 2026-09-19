@@ -1,0 +1,85 @@
+body{
+    background-color: black;
+}
+.Container{
+    border:0px solid ;
+    display: flex;
+    background-color: aqua;
+width:310px ;
+height:310px ;
+border-radius: 20px ;
+}
+.card{
+    border:0px solid ;
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+    width: 300px;
+}
+h1{
+    font-size: 20px;
+    text-align: center;
+}
+ button{
+    border: 0px solid;
+    border-radius: 5px;
+}
+
+.item
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.item1
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center; */
+    /* text-align: center; */
+gap: 6px;
+}
+.item1 h4 ,.item1 h6 {
+    margin: 8px;
+
+}
+
+hr{
+    width: 230px;
+}
+.item2
+{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: center;
+margin-top: 6px;
+}
+.item2>h5{
+background-color: rgb(224, 225, 227);
+border: 0px solid ;
+height: 20px;
+width: 80px;
+border-radius: 6px;
+}
+
+.item3
+{
+    display: flex;
+    flex-direction: row;
+    margin: 15px;
+}
+.item3>.B1{
+    position: absolute;
+    left : 200px;
+    top:250px;
+}
+.B1>button{
+    background-color:   black ;
+color: white;
+}
+.B>h4{
+    font-size: 10px;
+    column-gap: 13px;
+    }
