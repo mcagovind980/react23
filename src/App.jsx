@@ -1,15 +1,19 @@
 import React from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Props from "./Pages/Props";
-
+// import '../src/css/Practice.css'
+// import '../src/css/Ama.css'
+// import List from '../src/Pages/List.jsx'
+// import Form from '../src/Pages/Form.jsx'
+// import MyForm from '../src/Pages/MyForm.jsx'
+// import Ama from '../src/Pages/Ama.jsx'
+// import MyForm from '../src/Pages/MyForm.jsx'
+import Radio from '../src/Pages/Radio.jsx'
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Props />} />
-      </Routes>
-    </BrowserRouter>
+ <Radio/>
   );
 }
+
 
 export default App;
